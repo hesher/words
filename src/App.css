@@ -22,10 +22,12 @@ body {
   grid-gap: 50px;
 }
 .word-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
   justify-content: center;
   align-items: center;
   grid-gap: 20px;
+  max-width: 90%;
 }
 
 .score-container {
@@ -47,8 +49,8 @@ body {
   align-items: center;
   border: 1px solid black;
   border-radius: 5px;
-  height: 100px;
-  width: 100px;
+  min-width: 40px;
+  aspect-ratio: 1/1;
   font-size: 32px;
   overflow: hidden;
 }
@@ -59,11 +61,11 @@ body {
 }
 
 .character-container input {
-  width: 110px;
-  height: 110px;
+  aspect-ratio: 1/1;
   font-size: 32px;
   outline: none;
   text-align: center;
+  border: none;
 }
 
 .character-container input:focus,
